@@ -1,6 +1,6 @@
 {
   "name": "SmartPusher",
-  "version": "2.11",
+  "version": "2.53",
   "home_assistant_domain": "SmartPusher",
   "funding_url": "https://blueforcer.de",
   "new_install_prompt_erase": true,
