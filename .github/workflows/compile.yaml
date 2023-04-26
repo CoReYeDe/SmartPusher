@@ -4,7 +4,13 @@ on:
   push:
     branches:
       - main
+<<<<<<< HEAD
 
+=======
+      - customHA
+permissions:
+  contents: write
+>>>>>>> 8fde899... Added Permission Write
 jobs:
   compile_firmware:
     name: Compile the firmware
