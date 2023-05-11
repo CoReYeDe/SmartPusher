@@ -212,7 +212,7 @@ void MqttManager_::setup()
 
     if (SystemManager.HA_DISCOVERY)
     {
-        Serial.println("Starting Homeassistant discorvery");
+        Serial.println("Starting Homeassistant Discovery");
 
         device.setUniqueId(mac, sizeof(mac));
         device.setName("SmartPusher");
