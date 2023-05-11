@@ -215,7 +215,7 @@ void MqttManager_::setup()
         Serial.println("Starting Homeassistant Discovery");
 
         device.setUniqueId(mac, sizeof(mac));
-        device.setName("SmartPusher");
+        device.setName(SystemManager.MQTT_PREFIX.c_str());
         device.setSoftwareVersion(SystemManager.VERSION);
         device.setManufacturer("Blueforcer");
         device.setModel("8 Button Array");
