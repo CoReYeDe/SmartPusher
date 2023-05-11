@@ -214,10 +214,8 @@ void MqttManager_::setup()
     {
         Serial.println("Starting Homeassistant Discovery");
 
-        String MQTT_NAME = "SmartPusher-Office";
-
         device.setUniqueId(mac, sizeof(mac));
-        device.setName(MQTT_NAME.c_str());
+        device.setName(SystemManager.MQTT_HOST.c_str());
         device.setSoftwareVersion(SystemManager.VERSION);
         device.setManufacturer("Blueforcer");
         device.setModel("8 Button Array");
@@ -234,7 +232,7 @@ void MqttManager_::setup()
         scroll.setCurrentState(true);
         scroll.setName("Scrolling");
 
-        String cNameString = MQTT_NAME + " LED 1";
+        String cNameString = SystemManager.MQTT_HOST + " LED 1";
         const char *cName = cNameString.c_str();
 
         led1.onCommand(onSwitchCommand);
