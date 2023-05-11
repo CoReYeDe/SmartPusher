@@ -215,13 +215,13 @@ void MqttManager_::setup()
         Serial.println("Starting Homeassistant Discovery");
 
         device.setUniqueId(mac, sizeof(mac));
-        device.setName(SystemManager.MQTT_HOST.c_str());
+        device.setName(SystemManager.MQTT_PREFIX.c_str());
         device.setSoftwareVersion(SystemManager.VERSION);
         device.setManufacturer("Blueforcer");
         device.setModel("8 Button Array");
 
         brightness.setIcon("mdi:lightbulb");
-        brightness.setName("Brightness");
+        brightness.setName("SP-Office Brightness");
         brightness.onStateCommand(onStateCommand);
         brightness.onBrightnessCommand(onBrightnessCommand); // optional
         brightness.setCurrentState(true);
@@ -230,77 +230,74 @@ void MqttManager_::setup()
         scroll.onCommand(onScrollCommand);
         scroll.setIcon("mdi:arrow-left-right");
         scroll.setCurrentState(true);
-        scroll.setName("Scrolling");
-
-        String cNameString = SystemManager.MQTT_HOST + " LED 1";
-        const char *cName = cNameString.c_str();
+        scroll.setName("SP-Office Scrolling");
 
         led1.onCommand(onSwitchCommand);
         led1.setIcon("mdi:led-on");
-        led1.setName(cName);
+        led1.setName("SP-Office LED 1");
 
         led2.onCommand(onSwitchCommand);
         led2.setIcon("mdi:led-on");
-        led2.setName("LED 2");
+        led2.setName("SP-Office LED 2");
 
         led3.onCommand(onSwitchCommand);
         led3.setIcon("mdi:led-on");
-        led3.setName("LED 3");
+        led3.setName("SP-Office LED 3");
 
         led4.onCommand(onSwitchCommand);
         led4.setIcon("mdi:led-on");
-        led4.setName("LED 4");
+        led4.setName("SP-Office LED 4");
 
         led5.onCommand(onSwitchCommand);
         led5.setIcon("mdi:led-on");
-        led5.setName("LED 5");
+        led5.setName("SP-Office LED 5");
 
         led6.onCommand(onSwitchCommand);
         led6.setIcon("mdi:led-on");
-        led6.setName("LED 6");
+        led6.setName("SP-Office LED 6");
 
         led7.onCommand(onSwitchCommand);
         led7.setIcon("mdi:led-on");
-        led7.setName("LED 7");
+        led7.setName("SP-Office LED 7");
 
         led8.onCommand(onSwitchCommand);
         led8.setIcon("mdi:led-on");
-        led8.setName("LED 8");
+        led8.setName("SP-Office LED 8");
 
         led8.onCommand(onSwitchCommand);
         led8.setIcon("mdi:led-on");
-        led8.setName("LED 8");
+        led8.setName("SP-Office LED 8");
 
         btn1.setIcon("mdi:radiobox-marked");
-        btn1.setName("Button 1");
+        btn1.setName("SP-Office Button 1");
         btn1.setValue("-");
 
         btn2.setIcon("mdi:radiobox-marked");
-        btn2.setName("Button 2");
+        btn2.setName("SP-Office Button 2");
         btn2.setValue("-");
 
         btn3.setIcon("mdi:radiobox-marked");
-        btn3.setName("Button 3");
+        btn3.setName("SP-Office Button 3");
         btn3.setValue("-");
 
         btn4.setIcon("mdi:radiobox-marked");
-        btn4.setName("Button 4");
+        btn4.setName("SP-Office Button 4");
         btn4.setValue("-");
 
         btn5.setIcon("mdi:radiobox-marked");
-        btn5.setName("Button 5");
+        btn5.setName("SP-Office Button 5");
         btn5.setValue("-");
 
         btn6.setIcon("mdi:radiobox-marked");
-        btn6.setName("Button 6");
+        btn6.setName("SP-Office Button 6");
         btn6.setValue("-");
 
         btn7.setIcon("mdi:radiobox-marked");
-        btn7.setName("Button 7");
+        btn7.setName("SP-Office Button 7");
         btn7.setValue("-");
 
         btn8.setIcon("mdi:radiobox-marked");
-        btn8.setName("Button 8");
+        btn8.setName("SP-Office Button 8");
         btn8.setValue("-");
     }
     else

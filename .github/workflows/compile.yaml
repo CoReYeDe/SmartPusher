@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - Discovery
+      - SPOffice
 permissions:
   contents: write
 jobs:
